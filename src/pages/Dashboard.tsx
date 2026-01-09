@@ -36,7 +36,7 @@ export default function Dashboard() {
 
   return (
     <div className="min-h-screen bg-slate-50 pb-20">
-      <Navbar />
+     
       
       <main className="container max-w-lg mx-auto p-4 space-y-6">
          {/* 0. 概览卡片 (新增) */}
