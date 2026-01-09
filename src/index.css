@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 下面可以留空，或者加一些全局样式 */
+html, body {
+  height: 100%;
+}
