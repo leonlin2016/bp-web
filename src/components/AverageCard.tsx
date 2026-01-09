@@ -1,6 +1,7 @@
 import { Reading } from "@/types";
 import { Card, CardContent } from "@/components/ui/card";
 
+// 关键修复：这里定义了 Props 接口，并使用了 Reading 类型
 interface Props {
   data: Reading[];
 }
@@ -20,9 +21,10 @@ export default function AverageCard({ data }: Props) {
   const avgSys = Math.round(total.sys / data.length);
   const avgDia = Math.round(total.dia / data.length);
 
-  // 判断状态颜色
+  // 判断状态
   const isHigh = avgSys >= 140 || avgDia >= 90;
-  const statusColor = isHigh ? "text-red-600" : "text-teal-600";
+  
+  const statusColor = isHigh ? "text-red-500" : "text-emerald-500";
   const statusText = isHigh ? "偏高" : "正常";
 
   return (
@@ -35,7 +37,7 @@ export default function AverageCard({ data }: Props) {
           </div>
         </div>
         <div className="text-right">
-          <div className={`text-lg font-bold ${isHigh ? "text-red-400" : "text-emerald-400"}`}>
+          <div className={`text-lg font-bold ${statusColor}`}>
             {statusText}
           </div>
           <p className="text-xs text-slate-500 mt-1">mmHg</p>
