@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { supabase } from "@/lib/supabase";
 import { Reading } from "@/types";
-import Navbar from "@/layout/Navbar";
+
 import AddReadingForm from "@/components/AddReadingForm";
 import ReadingList from "@/components/ReadingList";
 import TrendChart from "@/components/TrendChart"; // 引入图表
